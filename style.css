@@ -335,7 +335,7 @@ nav.navbar {
 }
 
 article:nth-of-type(1) .project .img {
-  background: url(./sits.png);
+  background: url(https://raw.githubusercontent.com/Mugdi-agence/mugdi/refs/heads/main/sits.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
