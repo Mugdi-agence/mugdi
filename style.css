@@ -341,7 +341,7 @@ article:nth-of-type(1) .project .img {
 }
 
 .etude > article:nth-of-type(2) .project .img {
-  background: url(./site.png);
+  background: url(https://raw.githubusercontent.com/Mugdi-agence/mugdi/refs/heads/main/site.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -351,9 +351,6 @@ article:nth-of-type(1) .project .img {
   box-shadow: 0 10px 100px black;
 }
 
-article:nth-of-type(2) .project .img {
-  background: black;
-}
 #s4 a {
   padding: 20px 40px;
   color: white;
