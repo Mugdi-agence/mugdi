@@ -1,0 +1,173 @@
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  html { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 13px; }
+}
+
+
+.project {
+  width: 100%;
+  height: max-content;
+  margin-top: -40vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+
+  /* ===== TITRE ===== */
+  .title {
+    margin-left: 2.5rem; // 40px
+
+    .overlay {
+      overflow: hidden;
+
+      h1 {
+        font-size: 5rem; // 80px
+        font-weight: 400;
+        margin: 0;
+        display: inline-block;
+        transform: translateY(110%) scale(1.01);
+      }
+
+      p {
+        font-size: 1.25rem; // 20px
+        font-weight: 500;
+        margin: 0;
+        opacity: 0.7;
+        transform: translateY(100%);
+      }
+    }
+  }
+
+  /* ===== CARDS GRID ===== */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    margin-top: 5vh;
+    width: 100%;
+    gap: 1.5rem; // 24px
+    transform: translateY(50%);
+    z-index: 0;
+
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 40rem;
+      height: 32.8rem; // 525px
+      aspect-ratio: 16 / 10.4;
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid black;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      cursor: pointer;
+      color: white;
+
+      .number {
+        position: relative;
+        z-index: 2;
+        font-size: 4rem; // 64px
+        font-weight: 700;
+        opacity: 0;
+        text-shadow: 0 0 3rem #000;
+        transition: opacity 0.5s;
+      }
+
+      .card-title {
+        position: absolute;
+        bottom: 1.25rem;
+        left: 1.25rem;
+        z-index: 2;
+        opacity: 0;
+
+        font-size: 1.25rem; // 20px
+        font-weight: 500;
+        padding: 1.5rem 4rem;
+        border-radius: 1.875rem;
+        background: rgba(0, 0, 0, 0.44);
+        backdrop-filter: blur(15px);
+        box-shadow: 0 0.6rem 6rem rgba(0, 0, 0, 0.38);
+        transition: opacity 0.2s;
+      }
+
+      &:hover {
+        .number { opacity: 0.7; }
+        .card-title { opacity: 1; }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .project {
+
+    margin-top: -30vh;
+
+    .title {
+      margin-left: 2rem;
+    }
+
+    .cards {
+      gap: 1.25rem;
+
+      .card {
+        height: 30rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .project {
+
+    margin-top: -15vh;
+
+    .title {
+      margin-left: 1rem;
+
+      .overlay h1 {
+        font-size: 3rem;
+        transform: translateY(0);
+      }
+
+      .overlay p {
+        font-size: 1.1rem;
+        transform: translateY(0);
+      }
+    }
+
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      padding: 0 1rem;
+      transform: translateY(0);
+
+      .card {
+        height: auto;
+        aspect-ratio: 16 / 10.4;
+
+        .number {
+          font-size: 3rem;
+        }
+
+        .card-title {
+          padding: 1rem 2.5rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

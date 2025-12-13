@@ -1,0 +1,233 @@
+html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 1024px) {
+    html { font-size: 14px; }
+  }
+  
+  @media (max-width: 480px) {
+    html { font-size: 13px; }
+  }
+  
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  footer {
+    background: #333;
+    margin-top: 10vh;
+    border-top-right-radius: 4.375rem; // 70px
+    border-top-left-radius: 4.375rem;
+    padding: 2rem;
+    overflow-x: hidden;
+  
+    .top {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      gap: 3rem;
+  
+      /* ===== LEFT ===== */
+      .left {
+        display: flex;
+        flex-direction: column;
+        gap: 3vh;
+  
+        .head {
+          display: flex;
+          flex-direction: column;
+          gap: 3vh;
+  
+          img {
+            width: 12.5rem; // 200px
+            max-width: 100%;
+          }
+  
+          span {
+            color: white;
+            font-size: 1rem;
+          }
+        }
+  
+        a {
+          color: black;
+          text-decoration: none;
+          font-size: 1.25rem; // 20px
+          font-weight: 600;
+          background: white;
+          width: fit-content;
+          padding: 1.5rem 4rem;
+          border-radius: 999px;
+          transition: 0.2s;
+  
+          &:hover {
+            color: white;
+            background: #939393;
+          }
+        }
+      }
+  
+      /* ===== MIDDLE ===== */
+      .middle {
+        h4 {
+          color: white;
+          font-size: 1.25rem;
+          text-decoration: underline;
+          margin-bottom: 0.75rem;
+        }
+  
+        .link {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+  
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            opacity: 0.9;
+          }
+        }
+      }
+  
+      /* ===== RIGHT ===== */
+      .right {
+        .bubble {
+          background: #222;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+          gap: 0.75rem;
+          border-radius: 0.75rem;
+          max-width: 100%;
+  
+          span {
+            font-size: 1.25rem;
+            font-weight: 600;
+          }
+  
+          .email {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+  
+            span {
+              font-weight: 900;
+            }
+  
+            .icon {
+              color: black;
+              padding: 0.6rem;
+              background: white;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+  
+          .social {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+  
+            .links {
+              background: #333;
+              width: fit-content;
+              padding: 0.9rem;
+              display: flex;
+              gap: 0.6rem;
+              border-radius: 999px;
+  
+              a {
+                color: black;
+                background: white;
+                width: 3.125rem; // 50px
+                height: 3.125rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                aspect-ratio: 1 / 1;
+                transition: 0.2s;
+  
+                &:hover {
+                  color: white;
+                  background: #939393;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    footer {
+      .top {
+        justify-content: space-between;
+        gap: 2rem;
+  
+        .middle {
+          display: none; // classique et propre en tablette
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer {
+      padding: 2rem 1.25rem;
+  
+      .top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem;
+  
+        .left {
+          align-items: center;
+  
+          a {
+            padding: 1rem 2.5rem;
+          }
+        }
+  
+        .right {
+          width: 100%;
+  
+          .bubble {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+  
+            .email {
+              justify-content: center;
+            }
+  
+            .social .links {
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    background: #222;
+    padding: 2rem;
+    text-align: center;
+  
+    span {
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
+  

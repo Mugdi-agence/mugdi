@@ -1,0 +1,29 @@
+.navigation {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100000000;
+    padding: 30px;
+    gap: 30%;
+  
+    .logo img {
+      height: 50px;
+      cursor: pointer;
+      pointer-events: none;
+    }
+  
+    .links {
+      display: flex;
+      gap: 24px;
+  
+      .link {
+        text-decoration: none;
+        color: #000000;
+        font-weight: 500;
+        mix-blend-mode: difference;
+        transition: color 0.3s;
+      }
+    }
+  }
+  

@@ -1,0 +1,133 @@
+html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 1024px) {
+    html { font-size: 14px; }
+  }
+  
+  @media (max-width: 480px) {
+    html { font-size: 13px; }
+  }
+
+  
+  .contact {
+    height: fit-content;
+    background: #222;
+    padding: 3.125rem; // 50px
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+    transform: scale(0.97);
+    border-radius: 1.0625rem; // 17px
+    overflow: hidden;
+  
+    /* ===== TITRE ===== */
+    .title {
+  
+      .overlay {
+        overflow: hidden;
+  
+        h1 {
+          font-size: 3.125rem; // 50px
+          font-weight: 600;
+          margin: 0;
+          color: white;
+        }
+  
+        p {
+          margin: 0.5rem 0 0;
+          color: white;
+          opacity: 0.5;
+          font-size: 1.25rem; // 20px
+        }
+      }
+    }
+  
+    /* ===== CTA ===== */
+    .cta {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: center;
+  
+      span {
+        color: white;
+        font-size: 1rem;
+        opacity: 0.8;
+      }
+  
+      a {
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.25rem; // 20px
+        background: white;
+        padding: 1.5rem 3rem;
+        border-radius: 999px;
+        transition: 0.2s;
+  
+        &:hover {
+          color: white;
+          background: #939393;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .contact {
+      padding: 2.5rem;
+      gap: 2rem;
+  
+      .title {
+        max-width: 60%;
+      }
+  
+      .cta {
+        margin-left: auto;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 1.5rem;
+      gap: 2rem;
+      transform: scale(1); // important pour éviter bug visuel mobile
+  
+      .title {
+        width: 100%;
+  
+        .overlay {
+          h1 {
+            font-size: 2.25rem; // lisible mobile
+          }
+  
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+  
+      .cta {
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+  
+        span {
+          text-align: center;
+        }
+  
+        a {
+          width: 100%;
+          text-align: center;
+          padding: 1.2rem 0;
+        }
+      }
+    }
+  }
+  

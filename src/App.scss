@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+  margin: 0;
+  overflow-x: hidden;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: black;
+  color: white;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, a {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}

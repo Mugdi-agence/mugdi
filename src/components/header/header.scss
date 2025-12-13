@@ -1,0 +1,158 @@
+header {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-x: hidden;
+  
+    /* ===== ETIQUETTE ===== */
+    .etiquette {
+      margin-top: 25vh;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      transform: scale(0);
+  
+      span {
+        opacity: 0.5;
+        font-size: 1rem;
+      }
+  
+      .circle {
+        color: #00FF37;
+        transform: scale(0.8);
+      }
+    }
+  
+    /* ===== TITRES ===== */
+    .overlay {
+      overflow: hidden;
+  
+      h1 {
+        margin: 0;
+        font-size: 5rem; // 80px
+        font-weight: 400;
+        color: #222;
+        display: inline-block;
+        transform: translateY(100%) scale(1.03);
+      }
+  
+      p {
+        margin: 0;
+        font-size: 1.25rem; // 20px
+        opacity: 0.5;
+        display: inline-block;
+        transform: translateY(100%) scale(1.03);
+      }
+    }
+  
+    /* ===== CTA ===== */
+    .cta {
+      margin-top: 5vh;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+  
+      .cta-1,
+      .cta-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+  
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          padding: 1.25rem 5rem;
+          border-radius: 999px;
+          transition: opacity 0.2s;
+          white-space: nowrap;
+  
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+  
+        span {
+          font-size: 0.95rem;
+        }
+      }
+  
+      .cta-1 a {
+        background: #111;
+        color: #fff;
+      }
+  
+      .cta-2 a {
+        background: #fff;
+        color: #222;
+        border: 1px solid #222;
+        padding: 1.25rem 6rem;
+      }
+    }
+  }
+
+  
+  .texted {
+    width: 100%;
+    border-top: 0.25rem solid #111;
+    border-bottom: 0.25rem solid #111;
+    overflow-x: hidden;
+    margin-top: 5vh;
+  
+    .marquee {
+      display: flex;
+      width: max-content;
+  
+      h1 {
+        font-size: 7.2rem; // 115px
+        font-weight: 200;
+        margin: 0;
+        white-space: nowrap;
+        user-select: none;
+      }
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 480px) {
+    .texted .marquee h1 {
+      font-size: 4rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header {
+      min-height: auto;
+      padding: 6vh 1.25rem;
+  
+      .etiquette {
+        margin-top: 15vh;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+  
+      .overlay h1 {
+        font-size: 3rem;
+      }
+  
+      .overlay p {
+        font-size: 1.1rem;
+      }
+  
+      .cta {
+        flex-direction: column;
+        gap: 1.25rem;
+  
+        .cta-1 a,
+        .cta-2 a {
+          padding: 1rem 2.5rem;
+        }
+      }
+    }
+  }
+  
