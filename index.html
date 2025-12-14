@@ -3,26 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <!-- === Favicon & Icons === -->
+    <!-- === Favicon & Icons pour tous les devices === -->
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/Logo-Cswif3uc.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/Logo-Cswif3uc.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/Logo-Cswif3uc.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/Logo-Cswif3uc.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/Logo-Cswif3uc.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/Logo-Cswif3uc.png">
     <link rel="mask-icon" href="/assets/Logo-Cswif3uc.png" color="#000000">
     <link rel="shortcut icon" href="/assets/Logo-Cswif3uc.png">
+    <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="msapplication-TileImage" content="/assets/Logo-Cswif3uc.png">
     <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- === Title & Meta Description === -->
     <title>Mugdi - Agence Web Premium | Sites Haut de Gamme</title>
     <meta name="description" content="Mugdi est une agence web premium spécialisée dans la création de sites sur-mesure, élégants et performants, pensés pour convertir vos visiteurs en clients.">
+    <meta name="keywords" content="Agence web premium, création site web, webdesign, UX/UI, sites sur-mesure, développement web, haute performance">
 
     <!-- === Canonical URL === -->
     <link rel="canonical" href="https://www.mugdi.com">
 
-    <!-- === Open Graph (Facebook, LinkedIn, etc.) === -->
+    <!-- === Open Graph (Facebook / LinkedIn) === -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mugdi - Agence Web Premium | Sites Haut de Gamme">
     <meta property="og:description" content="Mugdi crée des sites web sur-mesure, premium et performants, pensés pour convertir vos visiteurs en clients.">
@@ -30,32 +37,64 @@
     <meta property="og:url" content="https://www.mugdi.com">
     <meta property="og:site_name" content="Mugdi">
 
-
     <!-- === Google Fonts === -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- === JSON-LD Structured Data (SEO enrichi pour Google) === -->
+    <!-- === JSON-LD Structured Data === -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Mugdi",
-      "url": "https://www.mugdi.com",
-      "logo": "https://www.mugdi.com/src/assets/Logo.png",
-      "sameAs": [
-        "https://www.linkedin.com/company/mugdi",
-        "https://www.instagram.com/mugdi"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "contact@mugdi.com",
-        "contactType": "Customer Service",
-        "availableLanguage": "fr"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Mugdi",
+          "url": "https://www.mugdi.com",
+          "logo": "https://www.mugdi.com/src/assets/Logo.png",
+          "sameAs": [
+            "https://www.linkedin.com/company/mugdi",
+            "https://www.instagram.com/mugdi"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@mugdi.com",
+            "contactType": "Customer Service",
+            "availableLanguage": "fr"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "name": "Mugdi",
+          "url": "https://www.mugdi.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.mugdi.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Accueil",
+              "item": "https://www.mugdi.com"
+            }
+          ]
+        }
+      ]
     }
     </script>
+
+    <!-- === Stylesheets === -->
+    <link rel="stylesheet" href="/src/style.css">
+
+    <!-- === Mobile Safari & iOS Fixes === -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="Mugdi">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <script type="module" crossorigin src="/assets/index-A7H1plJm.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-BFLbYaN7.css">
