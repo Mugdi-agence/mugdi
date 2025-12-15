@@ -1,13 +1,25 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <!-- === Meta de base === -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    <!-- === FAVICON (GitHub Pages SAFE) === -->
-    <link rel="icon" href="./favicon.png" type="image/png" />
+    <!-- === Favicon & Icons === -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/Logo-Cswif3uc.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/Logo-Cswif3uc.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/Logo-Cswif3uc.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/Logo-Cswif3uc.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/Logo-Cswif3uc.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/Logo-Cswif3uc.png" />
+    <link rel="shortcut icon" href="/assets/Logo-Cswif3uc.png" />
+
+    <!-- === Theme / PWA === -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta name="msapplication-TileImage" content="/assets/Logo-Cswif3uc.png" />
 
     <!-- === Title & Meta Description === -->
     <title>Mugdi - Agence Web Premium | Sites Haut de Gamme</title>
@@ -15,32 +27,27 @@
       name="description"
       content="Mugdi est une agence web premium spécialisée dans la création de sites sur-mesure, élégants et performants, pensés pour convertir vos visiteurs en clients."
     />
-
-    <!-- === Canonical (GitHub Pages) === -->
-    <link
-      rel="canonical"
-      href="https://mugdi-agence.github.io/mugdi/"
+    <meta
+      name="keywords"
+      content="Agence web premium, création site web, webdesign, UX/UI, sites sur-mesure, développement web, haute performance"
     />
 
-    <!-- === Open Graph (SEO & Social) === -->
+    <!-- === Canonical (GitHub Pages) === -->
+    <link rel="canonical" href="https://mugdi-agence.github.io/mugdi/" />
+
+    <!-- === Open Graph === -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mugdi - Agence Web Premium" />
+    <meta property="og:title" content="Mugdi - Agence Web Premium | Sites Haut de Gamme" />
     <meta
       property="og:description"
-      content="Création de sites web premium, élégants et performants."
+      content="Mugdi crée des sites web sur-mesure, premium et performants, pensés pour convertir vos visiteurs en clients."
     />
     <meta
       property="og:image"
-      content="https://mugdi-agence.github.io/mugdi/favicon.png"
+      content="https://mugdi-agence.github.io/mugdi/src/assets/Logo.png"
     />
-    <meta
-      property="og:url"
-      content="https://mugdi-agence.github.io/mugdi/"
-    />
+    <meta property="og:url" content="https://mugdi-agence.github.io/mugdi/" />
     <meta property="og:site_name" content="Mugdi" />
-
-    <!-- === Theme color === -->
-    <meta name="theme-color" content="#000000" />
 
     <!-- === Google Fonts === -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -50,32 +57,42 @@
       rel="stylesheet"
     />
 
-    <!-- === Structured Data (JSON-LD) === -->
+    <!-- === JSON-LD Structured Data === -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Mugdi",
-        "url": "https://mugdi-agence.github.io/mugdi/",
-        "logo": "https://mugdi-agence.github.io/mugdi/favicon.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "contact@mugdi.com",
-          "contactType": "Customer Service",
-          "availableLanguage": "fr"
-        }
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Mugdi",
+            "url": "https://mugdi-agence.github.io/mugdi/",
+            "logo": "https://mugdi-agence.github.io/mugdi/src/assets/Logo.png",
+            "sameAs": [
+              "https://www.linkedin.com/company/mugdi",
+              "https://www.instagram.com/mugdi"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "email": "contact@mugdi.com",
+              "contactType": "Customer Service",
+              "availableLanguage": "fr"
+            }
+          }
+        ]
       }
     </script>
 
     <!-- === Styles === -->
     <link rel="stylesheet" href="./src/style.css" />
+
+    <!-- === iOS Fix === -->
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-title" content="Mugdi" />
     <script type="module" crossorigin src="/assets/index-Bh0_L8bl.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CdLTM6IU.css">
   </head>
 
   <body>
     <div id="root"></div>
-
-    <!-- === App === -->
   </body>
 </html>
