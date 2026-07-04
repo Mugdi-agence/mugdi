@@ -82,7 +82,7 @@ export default function Hero() {
                     <p className="hero-para">{t('hero.paragraph')}</p>
                     <div className="hero-cta">
                         <a
-                            href="mailto:contact.mugdi@gmail.com"
+                            href="#"
                             className="button-1"
                             ref={button1Ref}
                             onMouseEnter={() => onButtonEnter(button1Ref)}
@@ -92,7 +92,7 @@ export default function Hero() {
                             <div className="box"><ArrowForwardIcon/></div>
                         </a>
                         <a
-                            href="#project"
+                            href=""
                             className="button-2"
                             ref={button2Ref}
                             onMouseEnter={() => onButtonEnter(button2Ref)}

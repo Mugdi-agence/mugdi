@@ -11,7 +11,11 @@ export default function RootLayout({ children }) {
   return (
     <SmoothScroll>
       <html lang="en">
-        <head></head>
+        <head>
+        <title>MUGDI AGENCY - PREMIUM</title>
+        <link rel="icon" href="/black.png" type="image/png" />
+   
+        </head>
         <body>
           {isLoading && <Loader onComplete={() => setIsLoading(false)} />}
           {children}
