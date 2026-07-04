@@ -1,0 +1,127 @@
+{
+    "common": {
+      "bookSession": "Book a session",
+      "viewProjects": "View projects"
+    },
+    "nav": {
+      "approach": "Approach",
+      "projects": "Projects",
+      "expertise": "Expertise",
+      "process": "Process",
+      "cta": "Book a session",
+      "contact": "Contact"
+    },
+    "hero": {
+      "eyebrow": "Home",
+      "title": "Your site should be impossible to ignore.",
+      "paragraph": "We design web experiences that trigger something — a desire to stay, to come back, to share. For brands where image is an asset, not a checkbox."
+    },
+    "approach": {
+      "eyebrow": "Approach",
+      "titleHighlight": "What",
+      "titleRest": "we believe in",
+      "cards": {
+        "card1": {
+          "number": "01",
+          "titleHighlight": "A beautiful site",
+          "titleRest": "isn't enough",
+          "description": "It has to be understood in three seconds. We never choose aesthetics over clarity — we make them work together."
+        },
+        "card2": {
+          "title": "Your image is your first salesperson",
+          "description": "Before a call, before a meeting, your clients have already judged you. We build the version of you that makes people want to go further."
+        },
+        "card3": {
+          "title": "One vision, from start to finish",
+          "description": "Design, development, and motion are thought through together — not handed off between providers. That consistency is what shows in the result."
+        },
+        "card4": {
+          "number": "04",
+          "titleHighlight": "You approve.",
+          "titleRest": "You decide.",
+          "description": "Every phase is a validation step. You're never left waiting without knowing where things stand. Control stays on your side — from intent to launch."
+        }
+      }
+    },
+    "features": {
+      "eyebrow": "Features",
+      "titleHighlight": "What we deliver",
+      "titleRest": "precisely. No vague formulas.",
+      "cards": {
+        "card1": {
+          "symbol": "✦",
+          "titleHighlight": "Custom",
+          "titleRest": "showcase website",
+          "description": "Unique design, Next.js development, animations built to serve the brand — not to impress. No templates. Nothing recycled."
+        },
+        "card2": {
+          "symbol": "◈",
+          "titleHighlight": "3D &",
+          "titleRest": "interactive experiences",
+          "description": "When your product deserves to be experienced, not just seen. Configurators, virtual showrooms, brand animations with Three.js."
+        },
+        "card3": {
+          "symbol": "↺",
+          "titleHighlight": "Redesign &",
+          "titleRest": "repositioning",
+          "description": "Your site exists but no longer looks like you. We diagnose what's holding it back and rebuild it with intention — without starting from zero unnecessarily."
+        }
+      }
+    },
+    "process": {
+      "eyebrow": "Process",
+      "titleHighlight": "A clear process.",
+      "titleRest": "Zero gray areas.",
+      "steps": {
+        "step1": {
+          "title": "01 — Scoping",
+          "description": "Before creating anything, we understand. Your positioning, your clients, what your site needs to trigger in them. The outcome: a validated brief, a firm scope, zero ambiguity."
+        },
+        "step2": {
+          "title": "02 — Art Direction",
+          "description": "Moodboard, typography, palette, first key screens. You see the direction before development starts. Nothing is imposed — everything is justified."
+        },
+        "step3": {
+          "title": "03 — Development",
+          "description": "Next.js, animations, integrations. A preview environment accessible at any time. You follow progress in real time — no black box."
+        },
+        "step4": {
+          "title": "04 — Launch",
+          "description": "Testing, deployment, handover. You walk away with a site that runs and full ownership of what's in your hands."
+        }
+      }
+    },
+    "projects": {
+      "eyebrow": "Projects",
+      "titleHighlight": "Our",
+      "titleRest": "Projects",
+      "items": {
+        "item1": {
+          "tags": ["Concept", "Streetwear", "Digital identity"],
+          "title": "Streetwear Streaming",
+          "description": "Translating the energy of a cultural scene into a web experience. Art direction, animated typography, Next.js development with GSAP."
+        },
+        "item2": {
+          "tags": ["Concept", "Hospitality", "Luxury"],
+          "title": "Stay Where Elegance Meets the Horizon",
+          "description": "Creating the desire to book before even reading a single price. Immersive atmosphere, Core Web Vitals performance, local SEO."
+        }
+      },
+      "bottomText": "Every project answers a precise question — not 'how do we make a nice site', but 'what should this site make people feel?'",
+      "followLabel": "Follow the agency"
+    },
+    "cta": {
+      "titleLine1": "You know what your site",
+      "titleLine2": "should be doing.",
+      "paragraph": "A 30-minute session. No sales pitch — a real conversation about your project, your challenges, and what we could build together."
+    },
+    "footer": {
+      "subtitleLine1": "We don't build websites.",
+      "subtitleLine2": "We write scenes.",
+      "description": "Every project is custom-built to tell a story, strengthen a brand image, and leave a lasting impression.",
+      "navigationLabel": "Navigation",
+      "contactLabel": "Contact",
+      "copyright": "© {{year}} Mugdi. All rights reserved.",
+      "tagline": "We don't build websites. We write scenes."
+    }
+  }
