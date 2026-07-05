@@ -1,15 +1,11 @@
-'use client';
-
-import { useTranslation } from 'react-i18next';
-import { useRef } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import HomeIcon from '@mui/icons-material/Home';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import LensBlurIcon from '@mui/icons-material/LensBlur';
 import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
 import UploadIcon from '@mui/icons-material/Upload';
-import gsap from "gsap";
+import { getContent } from '@/app/locales';
+import { ProcessButton } from './Process.client';
 
 const stepIcons = [VideocamIcon, LensBlurIcon, PrecisionManufacturingIcon, UploadIcon];
 
@@ -20,34 +16,9 @@ const Waveform = ({ className }) => (
     </svg>
 );
 
-export default function Process() {
-    const { t } = useTranslation();
+export default function Process({ lang = 'en' }) {
+    const { process, common } = getContent(lang);
     const steps = ['step1', 'step2', 'step3', 'step4'];
-
-    // Créez un ref pour le bouton CTA principal
-    const buttonRef = useRef(null);
-
-    function onButtonEnter(ref) {
-        if (!ref.current) return;
-        gsap.killTweensOf(ref.current);
-        gsap.to(ref.current, {
-            scale: 1.05,
-            duration: 0.3,
-            opacity: 0.7,
-            ease: "elastic.out(2, 1)"
-        });
-    }
-
-    function onButtonLeave(ref) {
-        if (!ref.current) return;
-        gsap.killTweensOf(ref.current);
-        gsap.to(ref.current, {
-            scale: 1,
-            duration: 0.4,
-            opacity: 1,
-            ease: "elastic.out(2, 1)"
-        });
-    }
 
     return (
         <section className="process-section" id="process">
@@ -55,33 +26,25 @@ export default function Process() {
                 <div className="eyebrow">
                     <HomeIcon/>
                     <ArrowForwardIosIcon/>
-                    <span>{t('process.eyebrow')}</span>
+                    <span>{process.eyebrow}</span>
                 </div>
                 <h2 className="process-title">
-                    <i>{t('process.titleHighlight')}</i> <br /> {t('process.titleRest')}
+                    <i>{process.titleHighlight}</i> <br /> {process.titleRest}
                 </h2>
-                <a
-                    href="mailto:contact.mugdi@gmail.com"
-                    className="button-1"
-                    ref={buttonRef}
-                    onMouseEnter={() => onButtonEnter(buttonRef)}
-                    onMouseLeave={() => onButtonLeave(buttonRef)}
-                >
-                    {t('common.bookSession')}
-                    <div className="box"><ArrowForwardIcon/></div>
-                </a>
+                <ProcessButton label={common.bookSession} />
             </div>
             <div className="process-timeline">
                 {steps.map((step, idx) => {
                     const Icon = stepIcons[idx];
+                    const s = process.steps[step];
                     return (
                         <div className="layer" key={step}>
                             <div className="bloc">
                                 <Icon className="icon"/>
                                 <hr />
                                 <div className="pop">
-                                    <h3>{t(`process.steps.${step}.title`)}</h3>
-                                    <p>{t(`process.steps.${step}.description`)}</p>
+                                    <h3>{s.title}</h3>
+                                    <p>{s.description}</p>
                                 </div>
                                 <Waveform className="waveform" />
                                 <Waveform className="waveform2" />
@@ -92,5 +55,5 @@ export default function Process() {
                 })}
             </div>
         </section>
-    )
+    );
 }

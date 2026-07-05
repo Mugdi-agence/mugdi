@@ -3,7 +3,7 @@
   top: 0; left: 0;
   width: 36px;
   height: 36px;
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 50%;
   // plus de transform ici, géré entièrement par GSAP (xPercent/yPercent + x/y)
   z-index: 9999;
@@ -24,7 +24,8 @@
 
   .cursor-label {
     position: absolute;
-    color: black;
+    opacity: 1;
+    color: rgb(255, 255, 255);
     font-size: 16px;
     font-weight: 700;
     mix-blend-mode: difference;
@@ -47,7 +48,7 @@
 
     .cursor-label {
       opacity: 0;
-      color: white;
+      color: rgb(0, 0, 0);
       transform: scale(0.5);
     }
 
