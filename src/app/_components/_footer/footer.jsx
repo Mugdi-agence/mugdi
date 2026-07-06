@@ -14,7 +14,7 @@ export default function Footer({ lang = 'en' }) {
             <div className="footer-content">
                 <div className="footer-columns">
                     <div className="footer-branding">
-                        <img src="/white.png" alt="" className="footer-logo"/>
+                        <img src="/white.png" alt="Premium Agency" className="footer-logo"/>
                         <div className="footer-subtitle">
                             {footer.subtitleLine1}<br/>
                             {footer.subtitleLine2}

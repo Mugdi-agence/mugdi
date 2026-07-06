@@ -58,7 +58,7 @@ export default function NavbarClient({ lang, links, ctaLabel }) {
     return (
         <>
             <nav className="navbar">
-                <img src={"/logo.png"} alt="" />
+                <img src={"/logo.png"} alt="Premium Agency" />
 
                 <div className="nav-links">
                     {links.map(l => <a key={l.href} href={l.href}>{l.label}</a>)}

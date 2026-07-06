@@ -13,7 +13,6 @@ export default function Cursor() {
     useEffect(() => {
         if (window.matchMedia('(pointer: coarse)').matches) return;
 
-        // Centrage fixe une fois pour toutes, indépendant du mouvement
         gsap.set(cursorRef.current, { xPercent: -50, yPercent: -50 });
 
         const cursorX = gsap.quickTo(cursorRef.current, 'x', { duration: 0.25, ease: 'power3.out' });

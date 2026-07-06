@@ -3,13 +3,13 @@ import SmoothScroll from "./smoothScroll";
 import LoaderWrapper from "./LoaderWrapper.client";
 import { Analytics } from "@vercel/analytics/next";
 
-const SITE_URL = "https://www.mugdi.com";
+const SITE_URL = "https://mugdi.com";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "Mugdi Agency – Premium Website & Landing Page Creation",
+    default: "Mugdi Agency – Premium Websites & Landing Pages",
     template: "%s | Mugdi Agency",
   },
   description:
@@ -25,7 +25,11 @@ export const metadata = {
   creator: "Mugdi Agency",
   publisher: "Mugdi Agency",
 
-  // Open Graph (social sharing / premium preview)
+  // Balise canonique — évite le split d'autorité avec www.mugdi.com
+  alternates: {
+    canonical: SITE_URL,
+  },
+
   openGraph: {
     type: "website",
     url: SITE_URL,
@@ -44,7 +48,6 @@ export const metadata = {
     locale: "en_US",
   },
 
-  // Twitter Card
   twitter: {
     card: "summary_large_image",
     title: "Mugdi Agency – Premium Websites & Landing Pages",
@@ -53,7 +56,6 @@ export const metadata = {
     images: ["/og-image.png"],
   },
 
-  // Indexing
   robots: {
     index: true,
     follow: true,
@@ -69,13 +71,15 @@ export const metadata = {
   icons: {
     icon: "/black.png",
     shortcut: "/black.png",
+    apple: "/apple-touch-icon.png",
   },
 
   manifest: "/site.webmanifest",
-  
-  verification: {
-    google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
-  },
+
+  // Retirez ce bloc si la propriété est déjà vérifiée autrement (DNS/Vercel)
+  // verification: {
+  //   google: "VOTRE_VRAI_CODE_ICI",
+  // },
 
   category: "web design agency",
 };
