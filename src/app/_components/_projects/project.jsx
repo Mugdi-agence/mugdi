@@ -7,8 +7,10 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 import { getContent } from '@/app/locales';
 import { ProjectSectionWrapper, HoverLink } from './Project.client';
+import streetwearPNG from "../../../../public/streetwear.png";
+import hotelPNG from "../../../../public/hotel.png";
 
-const projectImages = ["/streetwear.png", "/hotel.png"];
+const projectImages = [streetwearPNG, hotelPNG];
 const projectLinks = ["https://streetwear.mugdi.com/", "https://hotel.mugdi.com/"];
 
 export default function Project({ lang = 'en' }) {
@@ -41,25 +43,33 @@ export default function Project({ lang = 'en' }) {
                     const project = items[key];
                     return (
                         <div key={key} className="project-card">
-                            <img src={projectImages[idx]} alt={project.title}/>
+                        <div
+                            className="project-card-image"
+                            style={{
+                            aspectRatio: `${projectImages[idx].width} / ${projectImages[idx].height}`,
+                            backgroundImage: `url(${projectImages[idx].src})`
+                            }}
+                        >
                             <div className="project-tags">
-                                {project.tags.map((tag, tagIdx) => (
-                                    <span key={tagIdx} className="project-tag">{tag}</span>
-                                ))}
-                            </div>
-                            <div className="project-pop">
-                                <div className="left">
-                                    <h3 className="project-card-title">{project.title}</h3>
-                                    <p className="project-card-description">{project.description}</p>
-                                </div>
-                                <hr />
-                                <div className="project-card-link">
-                                    <HoverLink href={projectLinks[idx]} target="_blank">
-                                        <ArrowOutwardIcon />
-                                    </HoverLink>
-                                </div>
+                            {project.tags.map((tag, tagIdx) => (
+                                <span key={tagIdx} className="project-tag">{tag}</span>
+                            ))}
                             </div>
                         </div>
+
+                        <div className="project-pop">
+                            <div className="left">
+                            <h3 className="project-card-title">{project.title}</h3>
+                            <p className="project-card-description">{project.description}</p>
+                            </div>
+                            <hr />
+                            <div className="project-card-link">
+                            <HoverLink href={projectLinks[idx]} target="_blank">
+                                <ArrowOutwardIcon />
+                            </HoverLink>
+                            </div>
+                        </div>
+                      </div>
                     );
                 })}
             </div>

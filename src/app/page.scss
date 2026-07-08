@@ -3,6 +3,7 @@
 body, html {
   margin: 0 auto;
   overflow-x: hidden;
+  background: white;
   font-family: 'Geist', 'Inter', Arial, sans-serif;
 }
 
@@ -856,70 +857,59 @@ body, html {
     align-items: center;
     margin-top: 5vh;
     gap: 1vh;
-
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  
     .project-card {
-      width: 93vw;
-      height: 92vh;
-      overflow: hidden;
-      border-radius: 30px;
-      position: relative;
       display: flex;
+      width: 100%;
+      box-sizing: border-box;
       flex-direction: column;
+      border-radius: 30px;
+      overflow: hidden;
       padding: 30px;
-
+      background: rgba(51, 51, 51, 0.59);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.108);
+    
       &:hover {
         .project-tags {
           transform: translateY(0);
         }
-
-        .project-pop {
-          transform: translateY(0);
+      }
+    
+      .project-card-image {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        aspect-ratio: 1/1;
+        padding: 30px;border-radius: 15px;
+    
+        .project-tags {
+          display: flex;
+          flex-direction: row;
+          gap: 1vw;
+          transition: 0.3s;
+    
+          .project-tag {
+            padding: 1rem 3rem;
+            background: rgba(0, 0, 0, 0.776);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.108);
+            color: white;
+            border-radius: 999px;
+          }
         }
       }
-
-      img {
-        z-index: 0;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0; left: 0;
-        object-fit: cover;
-        object-position: center;
-        transition: 0.3s;
-      }
-
-      .project-tags {
-        z-index: 2;
-        display: flex;
-        flex-direction: row;
-        gap: 1vw;
-        transform: translateY(-160%);
-        transition: 0.3s;
-
-        .project-tag {
-          padding: 1rem 3rem;
-          background: rgba(0, 0, 0, 0.776);
-          backdrop-filter: blur(15px);
-          border: 1px solid rgba(255, 255, 255, 0.108);
-          color: white;
-          border-radius: 999px;
-        }
-      }
-
+    
       .project-pop {
         display: flex;
         flex-direction: row;
-        background: rgba(0, 0, 0, 0.808);
-        backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.108);
         align-items: center;
-        border-radius: 15px;
-        margin-top: auto;
-        padding: 30px;
-        box-shadow: 1px 10px 100px rgba(0, 0, 0, 0.403);
-        transform: translateY(120%);
-        transition: 0.3s;
-
+        padding-top: 30px;
+    
         h3 {
           font-size: 50px;
           margin: 0;
@@ -928,37 +918,36 @@ body, html {
           line-height: 55px;
           color: rgb(255, 255, 255);
         }
-
+    
         p {
           color: rgba(255, 255, 255, 0.54);
           font-weight: 500;
           margin: 0;
           font-size: 20px;
         }
-
+    
         hr {
           background: rgba(255, 255, 255, 0.129);
           width: 1px;
           height: 100%;
           border: 0;
         }
-
+    
         .project-card-link {
           display: flex;
           justify-content: center;
           align-items: center;
-
+    
           a {
             border-radius: 50%;
           }
-
+    
           svg {
             color: black;
             background: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 2;
             font-size: 40px;
             padding: 30px;
             border-radius: 50%;
@@ -1056,50 +1045,50 @@ body, html {
     .project-cards {
       margin-top: 4vh;
       gap: 20px;
-
+    
       .project-card {
         width: 92vw;
-        height: 70vh;
-        padding: 20px;
-        box-sizing: border-box;
-
-        // Sur tactile pas de :hover, donc on affiche par défaut
-        .project-tags {
-          transform: translateY(0);
-          flex-wrap: wrap;
-          gap: 8px;
-
-          .project-tag {
-            padding: 0.6rem 1.4rem;
-            font-size: 13px;
+        // height + padding retirés, gérés par le flow des enfants
+    
+        .project-card-image {
+          padding: 20px; // override du padding desktop (30px) pour mobile
+    
+          .project-tags {
+            transform: translateY(0); // pas de :hover sur tactile, visible par défaut
+            flex-wrap: wrap;
+            gap: 8px;
+    
+            .project-tag {
+              padding: 0.6rem 1.4rem;
+              font-size: 13px;
+            }
           }
         }
-
+    
         .project-pop {
-          transform: translateY(0);
           flex-direction: column;
           align-items: flex-start;
           padding: 20px;
-
+    
           h3 {
             font-size: clamp(24px, 6vw, 32px);
             width: 100%;
             line-height: 1.25;
           }
-
+    
           p {
             font-size: 15px;
           }
-
+    
           hr {
             width: 100%;
             height: 1px;
             margin: 16px 0;
           }
-
+    
           .project-card-link {
             align-self: flex-end;
-
+    
             svg {
               font-size: 24px;
               padding: 16px;
