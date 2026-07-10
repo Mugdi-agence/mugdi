@@ -296,6 +296,7 @@ body, html {
       flex-wrap: wrap;
 
       .approach-card1, .approach-card2, .approach-card3, .approach-card4 {
+        height: fit-content;
         &:hover {
           cursor: pointer;
           svg {
@@ -779,7 +780,7 @@ body, html {
 
         .approach-card2,
         .approach-card3 {
-          height: 45vh;
+          height: max-content;
         }
       }
     }
@@ -1048,7 +1049,7 @@ body, html {
     
       .project-card {
         width: 92vw;
-        // height + padding retirés, gérés par le flow des enfants
+        height: max-content;
     
         .project-card-image {
           padding: 20px; // override du padding desktop (30px) pour mobile
@@ -1066,9 +1067,9 @@ body, html {
         }
     
         .project-pop {
+          position: relative;
           flex-direction: column;
           align-items: flex-start;
-          padding: 20px;
     
           h3 {
             font-size: clamp(24px, 6vw, 32px);
@@ -1137,7 +1138,7 @@ body, html {
   @media (max-width: 480px) {
     .project-cards {
       .project-card {
-        height: 60vh;
+        height: max-content;
 
         .project-tags {
           .project-tag {
