@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import SmoothScroll from "./smoothScroll";
 import LoaderWrapper from "./LoaderWrapper.client";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const SITE_URL = "https://mugdi.com";
 
@@ -115,12 +116,27 @@ export default async function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+ 
       </head>
       <body>
         <SmoothScroll>
           <LoaderWrapper>{children}</LoaderWrapper>
         </SmoothScroll>
         <Analytics />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4PBZWW8BW9"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-4PBZWW8BW9');
+          `}
+        </Script>
       </body>
     </html>
   );
